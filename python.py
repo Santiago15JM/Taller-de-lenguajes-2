@@ -42,8 +42,9 @@ thisdict = {
   "colors": ["red", "white", "blue"]
 }
 # Cambiar un valor en el diccionario
-thisdict["year"] = 2018
+thisdict["year"] = 2018 # ó
+thisdict.update({"year": 2020})
 
-# EJ8 
-
-
+# EJ8 Loop en un diccionario
+for x, y in thisdict.items():
+  print(x, y)
