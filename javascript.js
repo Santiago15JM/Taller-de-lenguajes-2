@@ -66,8 +66,18 @@ function sort() {
 
 function spliceArray() {
     const fruits = ["Banana", "Orange", "Apple", "Mango"];
-    alert(fruits.toString());
+    let txt = "1ra: " + fruits.toString();
 
     fruits.splice(2, 0, "Lemon", "Kiwi"); // Reemplaza o inserta elementos
-    alert(fruits.toString());
+    txt += "\n2da: " + fruits.toString();
+    alert(txt);
+}
+
+// 
+
+function dates() {
+    new Date();
+    new Date(year, month, day, hours, minutes, seconds, milliseconds);
+    new Date(milliseconds);
+    new Date(date);
 }
