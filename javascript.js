@@ -72,12 +72,3 @@ function spliceArray() {
     txt += "\n2da: " + fruits.toString();
     alert(txt);
 }
-
-// 
-
-function dates() {
-    new Date();
-    new Date(year, month, day, hours, minutes, seconds, milliseconds);
-    new Date(milliseconds);
-    new Date(date);
-}
