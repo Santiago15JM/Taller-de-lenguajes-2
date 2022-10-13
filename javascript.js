@@ -77,3 +77,99 @@ function dates() {
     new Date(year, month, day, hours, minutes, seconds, milliseconds);
     new Date(milliseconds);
 }
+
+function math() {
+    let txt = "";
+    txt += Math.round(5.5) + "\n";
+    txt += Math.ceil(5.5) + "\n";
+    txt += Math.floor(5.5) + "\n";
+    txt += Math.trunc(Math.PI) + "\n";
+    alert(txt);
+}
+
+function rand() {
+    alert(`Math.random() siempre devuelve un valor decimal entre 0 y 1: ${Math.random()}`);
+}
+
+function bools() {
+    alert(`10 > 9 = ${10 > 9}
+    "Hello" = ${Boolean("Hello")}
+    Math.PI = ${Boolean(Math.PI)}
+    0 = ${Boolean(0)}
+    "" = ${Boolean("")}
+    NaN = ${Boolean(NaN)}
+    `);
+}
+
+function streq() { // No es aconsejable crear objetos de tipo Boolean 
+    const x = new Boolean(false);
+    const y = new Boolean(false);
+    alert(x === y);
+}
+
+function ternary() {
+    let age = 19;
+    let voteable = (age < 18) ? "No puede votar" : "Puede votar";
+    alert(`19 Años: ${voteable}`);
+}
+
+function forin() { // Itera en las propiedades de un objeto
+    const person = { fname: "John", lname: "Doe", age: 25 };
+
+    let text = "";
+    for (let x in person) {
+        text += person[x];
+    }
+    alert(text);
+}
+
+function forof() { // Itera en los valores de un objeto iterable
+    const cars = [{ Marca: "BMW" }, "Volvo", { Marca: "Mini", color: "Rojo" }];
+
+    let text = "";
+    for (let x of cars) {
+        text += x + " ";
+    }
+    alert(text);
+}
+
+function regex() {
+    let text = "Visit Microsoft!";
+    let result = text.replace(/microsoft/i, "W3Schools");
+    alert(result);
+}
+
+function trycatch() {
+    try {
+        adddlert("Welcome guest!");
+    }
+    catch (err) {
+        alert(`Error: ${err.message}`);
+    }
+}
+
+function declare() { // El comportamiento defecto de JS es mover las declaraciones al inicio del bloque, denominado Hoisting
+    abc = 5; // Se asigna 5 a x
+    alert(abc);                     // Se muestra x in the element
+
+    var abc; // Se declara x
+}
+
+function arrow() {
+    hello = function () {
+        return "Hello World!";
+    }
+
+    hello = () => {
+        return "Hello World!";
+    }
+}
+
+
+
+
+
+/* Buenas practicas:
+    Evitar variables globales, new Objects(), ==, eval() (Evaluar codigo en string)
+
+    */
